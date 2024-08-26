@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stone-paper-Scissor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <section id="rcs">
+            <div class="Game">
+                <div class="title">
+                    <h1>ROCK</h1>
+                    <h1>PAPER</h1>
+                    <h1>SCISSORS</h1>
+                </div>
+                <div class="scoreboard">
+                    <div class="box"><p>COMPUTER<br>SCORE <h1 id="computerScore">0</h1></p></div>
+                    <div class="box"><p>YOUR<br> SCORE <h1 id="yourScore">0</h1></p></div>
+                </div>
+            </div>
+            
+            <!-- gamezone -->
+    
+            <div class="gamezone" id="gamezone">
+                <div class="line">
+                    <div class="lines" id="line1"></div>
+                    <div class="lines" id="line2"></div>
+                    <div class="lines" id="line3"></div>
+                </div>
+    
+                <div class="actions">
+                    <div class="rock action" id="rock" onclick="start('rock')">
+                        <div >
+                            <img src="images/Rock.png" alt="rock" width="50px" height="50px">
+                        </div>
+                    </div>
+                    <div class="scissor action" id="scissor" onclick="start('scissor')">
+                        <div>
+                            <img src="images/scissor.png" alt="scissor" width="50px" height="50px">
+                        </div>
+                    </div>
+                    <div class="paper action" id="paper" onclick="start('paper')">
+                        <div>
+                            <img src="images/paper.png" alt="paper" width="50px" height="50px">
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+            <!-- Result of the game -->
+            <div id="result">
+                <div class="pickedText">
+                    <div class="insidetext" id="usertext">
+                        <p id="youPick" class="text">YOU PICKED</p>
+                    </div>
+                    <div>
+                        <div id="userbox1">
+                            <div id="userbox2">
+                                <div id="userbox3">
+                                    <div class="action" id="addbg">
+                                        <div id="mypick">
+                                            <!-- Content goes here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <p id="resultShow"></p>
+                    <p class="textAgainst" id="dontshow"></p>
+                    <button class="pickbtn" id="btn"></button>
+                </div>
+                
+                <div class="pickedText">
+                    <div class="insidetext" id="pctext">
+                        <p id="pcPick" class="text">PC PICKED</p>
+                    </div>
+                    <div>
+                        <div id="pcbox1">
+                            <div id="pcbox2">
+                                <div id="pcbox3">
+                                    <div class="action" id="addbgpc">
+                                        <div id="pcchoice">
+                                            <!-- Content goes here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- Rules Box -->
+    
+    
+            <div class="rulesBox" id="ruleModal">
+                <div id="close1">
+                    <img src="images/X.png" alt="close" height="25px" width="25px">
+                </div>
+                <h2>Game Rules</h2>
+                <div class='impRules'>
+                    <img src="images/Rectangle 5.png" alt="dot">
+                    <p>Rock beats scissors, scissors beat paper, and paper beats rock.</p>
+                </div>
+                <div class="impRules">
+                    <img src="images/Rectangle 5.png" alt="dot">
+                    <p>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</p>
+                </div>
+                <div class="impRules">
+                    <img src="images/Rectangle 5.png" alt="dot">
+                    <p>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</p>
+                </div>
+                <div class="impRules">
+                    <img src="images/Rectangle 5.png" alt="dot">
+                    <p>If both players lay down the same hand, each player lays down another hand</p>
+                </div>
+            </div>
+            
+           
+            <!-- Buttons  -->
+            <div class="buttons" id="rulesandnext">
+                <div class="btn" id="clickToRules">RULES</div>
+                <div id="next"></div>
+            </div>
+        </section>
+
+        <div id="celebration">
+            <div class="rulesBox" id="ruleModal2">
+                <div id="close2">
+                    <img src="images/X.png" alt="close" height="25px" width="25px">
+                </div>
+                <h2>Game Rules</h2>
+                <div class='impRules'>
+                    <img src="images/Rectangle 5.png" alt="dot">
+                    <p>Rock beats scissors, scissors beat paper, and paper beats rock.</p>
+                </div>
+                <div class="impRules">
+                    <img src="images/Rectangle 5.png" alt="dot">
+                    <p>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</p>
+                </div>
+                <div class="impRules">
+                    <img src="images/Rectangle 5.png" alt="dot">
+                    <p>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</p>
+                </div>
+                <div class="impRules">
+                    <img src="images/Rectangle 5.png" alt="dot">
+                    <p>If both players lay down the same hand, each player lays down another hand</p>
+                </div>
+            </div>
+            <div class="images">
+                <img src="images/stars.png" alt="animation" id="stars" class="stacked">
+                <img src="images/Trophy.png" alt="cup" id="trophy" class="stacked" height="px" width="100px">
+            </div>
+            <div class="celebText">
+                <h1>HURRAY!!</h1>
+                <p>YOU WON THE GAME</p>
+                <button class="pickbtn" id="btn2">PLAY AGAIN</button>
+                <div id="clickToRulesinCeleb">RULES</div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

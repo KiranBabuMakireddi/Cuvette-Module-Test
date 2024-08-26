@@ -1,0 +1,529 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+    box-sizing: border-box;
+}
+body,html{
+    overflow: hidden;
+}
+#rcs{
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    background-color: #8CC461;
+    display: block;
+}
+.app{
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    background-color: #8CC461;
+}
+/* Header */
+.Game{
+    margin-top: 1.50rem;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 0.74rem ;
+    display: flex;
+    border: 2px solid #ffffff;
+    align-items: center;
+    justify-content: space-between;
+    visibility: visible;
+}
+.title{
+    color: #ffffff;
+    font-weight: 600;
+    padding: 1rem;
+}
+
+.scoreboard{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    background-color: #ffffff;
+    border-radius: 0.34rem;
+    width: 6rem;
+    height: 6rem;
+    margin: 2rem;
+    padding: 0.25rem;
+    
+}
+.box p{
+    color: #656565;
+    font-weight: 500;
+    font-size: 15px;
+    text-align: center;
+}
+.box h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+/* Gamezone */
+
+.gamezone{
+    margin-top: 3rem;
+    display: grid;
+    justify-items: center;
+    place-items: center;
+    position: fixed;
+    top: 40%;
+    left: 40%;
+    visibility: visible;
+}
+.lines{
+    width: 260px;
+    height: 0px;
+    border: 7px solid #000000a3;
+}
+
+#line2 {
+    transform: rotate(120deg);
+    position: relative;
+    left: 74px;
+    top: 96px;
+  }
+  #line3 {
+    transform: rotate(60deg);
+    position: relative;
+    right: 70px;
+    top: 90px;
+  }
+  
+
+  /* actions */
+
+  .action{
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .paper{
+    border: 10px solid #FFA943;
+  }
+  .rock{
+  
+    border:10px solid #0074B6;
+  }
+  .scissor{
+    border: 10px solid #BD00FF
+  }
+
+  #rock{
+    position: relative;
+    bottom: 90px;
+    right: 110px;
+
+  }
+  #scissor{
+    position: relative;
+    bottom: 190px;
+    left: 135px;
+  }
+
+  #paper{
+    position: relative;
+    bottom:60px
+  }
+ 
+
+  /* result */
+
+  #result{
+    margin-top:5rem;
+    padding: 0rem 8rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    visibility: hidden;
+  }
+.box1, .box2, .box3 {
+  border-radius: 50%;
+  position: relative; 
+}
+.box1 {
+padding: 1.5rem;
+background: #66b248;
+box-shadow: 0px 1px 62px rgba(0, 0, 0, 0.13);
+}
+
+.box2 {
+padding: 2rem;
+background-color: #32a62f;
+}
+
+.box3 {
+padding: 2rem;
+background-color: #289a27;
+  
+}
+.pickText{
+  z-index: 100;
+  font-size: 12px;
+}
+
+.pickedText{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #ffffff;
+}
+
+  .insidetext{
+    position: absolute;
+    font-size: 16px;
+    font-weight: 600;
+    z-index: 100;
+  }
+  .pickbtn{
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #6B6B6B;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    
+  }
+
+  .textAgainst{
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 5px;
+    font-weight: 600;
+    
+  }
+
+  #resultShow{
+    font-weight: 600;
+    text-align: center;
+    padding: 5px;
+    font-size: 25px;
+    color: #ffffff;
+  }
+
+
+  /* Rules Box */
+  .rulesBox {
+    width: 325px;
+    height: fit-content;
+    color: #ffffff;
+    background-color: rgba(0, 68, 41, 1);
+    border: 7px solid rgba(255, 255, 255, 1);
+    position: fixed;
+    bottom: 0;
+    right: 4%;
+    z-index: 1000;
+    padding: 0.50rem;
+    transform: scale(0.1);
+    visibility: hidden;
+    transition: transform 0.4s, bottom 0.4s, visibility 0.4s;
+}
+
+.rulesVisible {
+    visibility: visible;
+    bottom: 13%;
+    transform: scale(1);
+}
+  .rulesBox h2{
+    text-align: center;
+  }
+  .impRules{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .impRules img{
+    padding: 0.25rem;
+  }
+  .impRules p{
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  #close1{
+    position: absolute;
+    bottom: 95%;
+    left: 95%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid;
+    border-radius: 50%;
+    background-color: rgba(255, 0, 0, 1);
+    cursor: pointer;
+  }
+
+  /* celebration */
+  #stars{
+    position:absolute;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+ #trophy{
+  position:absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+ }
+ #celebration{
+  background-color: #8CC461;
+  text-align: center;
+  color: #ffffff;
+  display: none;
+  width: 100%;
+  height: 100vh;
+
+ }
+ .celebText{
+   position: relative;
+   top: 60%;
+   width: 100%;
+  
+   
+ }
+ .celebText h1{
+  font-size: 4rem;
+ }
+ .celebText p{
+  font-size: 2.5rem;
+ }
+ #btn2{
+  margin-top: 2rem;
+ }
+ #clickToRulesinCeleb{
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffff;
+  border: 2px solid #ffffff;
+  margin-right: 2rem;
+  padding: 0.45rem 1.5rem;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  position: fixed;
+  right: 4%;
+  bottom: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility:visible;
+}
+#celebration .rulesBox{
+  text-align: left;
+}
+
+.rulesVisible2 {
+  visibility: visible;
+  bottom: 13%;
+  transform: scale(1);
+  z-index: 1000;
+}
+#close2{
+position: absolute;
+bottom: 95%;
+left: 95%;
+width: 50px;
+height: 50px;
+display: flex;
+align-items: center;
+justify-content: center;
+border: 5px solid;
+border-radius: 50%;
+background-color: rgba(255, 0, 0, 1);
+cursor: pointer;
+}
+
+  /* buttons */
+  .buttons{ 
+    position: absolute;
+    right: 3%;
+    bottom: 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility:visible;
+  }
+
+  .btn{
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffff;
+    border: 2px solid #ffffff;
+    margin-right: 2rem;
+    padding: 0.45rem 1.5rem;
+    border-radius: 0.75rem;
+    cursor: pointer;
+  }
+
+  #next{
+    visibility: hidden;
+  }
+  
+ 
+/* Responsiveness */
+@media (max-width: 725px ) {
+  body,html{
+    margin: 0;
+    padding: 0;
+    background-color: #8CC461;
+  }
+  .Game {
+    width: 0%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    text-align: center;
+  }
+
+  .gamezone {
+    display: grid;
+    justify-items: center;
+    place-items: center;
+    position: fixed;
+    top: 30%;
+    left: 12%;
+    visibility: visible;
+  }
+
+  .scoreboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .box {
+    background-color: #ffffff;
+    border-radius: 0.34rem;
+    width: 60px;
+    height: 60px;
+    padding: 2px;
+    margin: 1px;
+  }
+
+  .box p {
+    color: #656565;
+    font-weight: 500;
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .box h1 {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .pickbtn {
+    height: 30px;
+    width: 150px;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #6B6B6B;
+    cursor: pointer;
+  }
+
+  #result {
+    margin: 10px;
+    padding: 0rem 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    visibility: hidden;
+  }
+
+  .pickedText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 40px;
+  }
+  #result {
+    margin-top: 2rem; 
+    padding: 0rem 2rem; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+  }
+  
+  .box1 {
+    padding: 0.5rem;
+    background: #66b248;
+    box-shadow: 0px 1px 62px rgba(0, 0, 0, 0.13);
+  }
+    
+  .box2 {
+    padding: 0.5rem;
+    background-color: #32a62f;
+  }
+    
+  .box3 {
+    padding: 0.5rem;
+    background-color: #289a27;
+  }
+
+  .pickText {
+    font-size: 10px; 
+  } 
+
+  .textAgainst {
+    padding: 1px;
+  }
+
+  #resultShow {
+    font-size: 20px; 
+  }
+
+  .pickedText {
+    margin: 10px; 
+  }
+
+  .text {
+    color: #ffffff;
+    position: relative;
+    left: 100%;
+    padding: 30px;
+  }
+
+  .pickbtn {
+    height: 40px; 
+    width: 120px;
+    font-size: 16px;
+  }
+  #celebration {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+  
+}
