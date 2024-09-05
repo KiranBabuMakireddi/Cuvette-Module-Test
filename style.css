@@ -297,7 +297,7 @@ background-color: #289a27;
   text-align: center;
   color: #ffffff;
   display: none;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 
  }
@@ -395,10 +395,7 @@ cursor: pointer;
     background-color: #8CC461;
     
   }
-#clickToRulesinCeleb{
-    bottom:10%;
-}
-         
+
   .Game {
     width: 0%;
     display: flex;
