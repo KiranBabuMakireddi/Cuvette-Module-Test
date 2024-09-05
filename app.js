@@ -28,6 +28,7 @@ function VisibilityofBtns(checker){
         next.innerHTML=`NEXT`;
         next.classList.add('btn');
         next.style.visibility='visible';
+        next.style.display='block'
     }
     else{
         next.classList.remove('btn');
@@ -229,7 +230,8 @@ btn2.onclick = () => {
     rcs.style.visibility='visible'
     rcs.style.display='block'
     celebration.style.display='none'
-    next.style.visibility='hidden'
+    // next.style.visibility='hidden'
+    next.style.display='none'
 }
 
 
