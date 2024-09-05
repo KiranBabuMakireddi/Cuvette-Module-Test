@@ -522,7 +522,7 @@ cursor: pointer;
   .pickedText {
     margin: 10px; 
   }
-
+ 
   .text {
     color: #ffffff;
     position: relative;
@@ -544,5 +544,11 @@ cursor: pointer;
     align-items: center;
     display: none;
   }
-  
+  #btn2{
+    margin-top: 0.4rem;
+  }
+}
+#clickToRulesinCeleb{
+  right:1%;
+  bottom: 1%;
 }
