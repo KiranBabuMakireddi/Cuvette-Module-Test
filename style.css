@@ -284,6 +284,7 @@ background-color: #289a27;
     top: 32%;
     left: 50%;
     transform: translate(-50%,-50%);
+    
   }
 
  #trophy{
@@ -299,15 +300,26 @@ background-color: #289a27;
   display: none;
   width: 100vw;
   height: 100vh;
+  position: relative;
+  animation:zoomInOut 1s ease-in-out 2;
 
  }
+ @keyframes zoomInOut {
+  0%, 100% {
+    transform: scale(1); /* Original size */
+  }
+  50% {
+    transform: scale(1.5); /* Zoom in */
+  }
+}
+
  .celebText{
    position: relative;
    top: 60%;
    width: 100%;
-  
-   
+
  }
+
  .celebText h1{
   font-size: 4rem;
  }
