@@ -40,7 +40,9 @@ body,html{
     font-weight: 600;
     padding: 1rem;
 }
-
+.title h1{
+  line-height:37px ;
+}
 .scoreboard{
     display:flex;
     align-items: center;
