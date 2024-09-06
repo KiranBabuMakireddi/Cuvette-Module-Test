@@ -33,6 +33,7 @@ function VisibilityofBtns(checker){
     else{
         next.classList.remove('btn');
         next.style.visibility='hidden';
+        next.style.display='none';
     }
 }
 

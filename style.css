@@ -65,7 +65,7 @@ body,html{
     text-align: center;
 }
 .box h1{
-    font-size: 36px;
+    font-size: 45px;
     text-align: center;
 }
 
@@ -147,7 +147,7 @@ body,html{
   /* result */
 
   #result{
-    margin-top:5rem;
+    margin-top:7rem;
     padding: 0rem 8rem;
     display: flex;
     justify-content: space-around;
@@ -176,7 +176,7 @@ background-color: #289a27;
 }
 .pickText{
   z-index: 100;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .pickedText{
@@ -191,6 +191,7 @@ background-color: #289a27;
   .insidetext{
     position: absolute;
     font-size: 16px;
+    padding-bottom: 20px;
     font-weight: 600;
     z-index: 100;
   }
@@ -222,7 +223,6 @@ background-color: #289a27;
     font-size: 25px;
     color: #ffffff;
   }
-
 
   /* Rules Box */
   .rulesBox {
@@ -466,7 +466,7 @@ cursor: pointer;
   }
 
   #result {
-    margin: 10px;
+    margin: 3px;
     padding: 0rem 8rem;
     display: flex;
     flex-direction: column;
@@ -481,7 +481,7 @@ cursor: pointer;
     align-items: center;
     justify-content: center;
     position: relative;
-    margin: 40px;
+    margin: 35px;
   }
   #result {
     margin-top: 2rem; 
@@ -520,14 +520,15 @@ cursor: pointer;
   }
 
   .pickedText {
-    margin: 10px; 
+    margin: 30px; 
   }
  
   .text {
     color: #ffffff;
     position: relative;
     left: 100%;
-    padding: 30px;
+    padding: 10px;
+   
   }
 
   .pickbtn {
